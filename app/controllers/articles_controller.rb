@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
     params.permit!
     @article = Article.new(params[:article])
     @article.save()
+    # test comment
     
     redirect_to @article
   end
