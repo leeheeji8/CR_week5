@@ -6,9 +6,12 @@ class ArticlesController < ApplicationController
     params.permit!
     @article = Article.new(params[:article])
     @article.save()
-    # test comment
-    
+    # test comment at 4/15 
     redirect_to @article
+  end
+  
+  def index
+    @articles=Article.all
   end
   
   def show
