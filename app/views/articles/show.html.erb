@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="assets/stylesheets/articles.scss" />
+<center><h1>저장내역</h1></center>
 <p>
-    <strong>Title:</strong>
+    <strong>Title</strong>
     <%= @article.title %>
 </p>
 <p>
@@ -7,4 +9,6 @@
     <%= @article.content %>
 </p>
 
-<%= link_to "Articles List", articles_path %>
+<%= link_to "전체목록", articles_path %>
+<%= link_to "수정", edit_article_path(@article) %>
+<%= link_to "삭제", article_path(@article), method: :delete %>

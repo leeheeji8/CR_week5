@@ -1,16 +1,18 @@
-<h1>문자 보내기</h1>
+<h1>Edit Article</h1>
 <link rel="stylesheet" href="assets/stylesheets/articles.scss" />
 
-<%= form_for :article, url: '/articles/' do |f| %>
+<%= form_for :article, url: article_path(@article),
+method: :patch do |f| %>
 <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
 </p>
-<p>
+
+<P>
     <%= f.label :content %><br>
     <%= f.text_field :content %>
-</p>
-<p>
-    <%= f.submit %>
-</p>
+</P>
+
+<p><%= f.submit %></p>
 <% end %>
+
